@@ -102,15 +102,14 @@ input{
 .names input{
     display: flex;
     flex-direction: column;
-    width: calc(17vw /2);
+    width: calc(17vw /2 - 10px);
     /* width: 100%; */
 }
 .names {
     display: flex;
 }
-.firstName,
-.lastName{
-    width: calc(17vw /2);
+.firstName{
+    margin-right: 15px;
 }
 
 input:hover {
@@ -119,9 +118,6 @@ input:hover {
 input:focus {
     outline: none;
     border-bottom: 2px solid  var(--button-color);
-}
-input:invalid {
-    /* border-bottom: 2px solid blue; */
 }
 
 
