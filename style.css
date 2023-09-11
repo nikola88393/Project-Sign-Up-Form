@@ -7,6 +7,7 @@
     font-family: Quicksand;
     src: url(Quicksand-font/Quicksand-VariableFont_wght.ttf);
 }
+
 body {
     background-image: url(pexels-craig-adderley-1563356.jpg);
     background-size: cover;
@@ -41,10 +42,11 @@ button {
     background-color: var(--button-color);
 }
 input::placeholder {
-    color: var(--font-color);
-    font-size: 1.1rem;
+    color: grey;
 }
-
+label {
+    font-weight: 600;
+}
 input{
     margin-bottom: 2vh;
     font-size: 1.1rem;
@@ -52,10 +54,8 @@ input{
     width: 17vw;
     height: 4vh;
     border: none;
-    border-radius: 5px;
-    background-color: grey;
-    opacity: 0.6;
-    
+    border-bottom:2px solid grey;
+    background-color: transparent;
 }
 .personalInfo{
     display: flex;
@@ -99,16 +99,29 @@ input{
 .formContainer{
     width: 50%;
 }
+.names input{
+    display: flex;
+    flex-direction: column;
+    width: calc(17vw /2);
+    /* width: 100%; */
+}
+.names {
+    display: flex;
+}
+.firstName,
+.lastName{
+    width: calc(17vw /2);
+}
 
 input:hover {
-    border: 2px solid var(--button-color);
+    border-bottom: 2px solid  var(--button-color);
 }
-input:active {
-    border: 2px solid var(--button-color);
-
+input:focus {
+    outline: none;
+    border-bottom: 2px solid  var(--button-color);
 }
-input[type="email"]:invalid {
-    border: 1px solid red;
+input:invalid {
+    /* border-bottom: 2px solid blue; */
 }
 
 

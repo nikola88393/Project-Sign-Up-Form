@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="imgContainer">
-            <h1>Join the ride.</h1>
-            <h2>Sign up today!</h2>
-            <p>Already have an account?<a href="www.google.com">Sign in</a></p>
-
-        </div>
-        <div class="formContainer">
+      <div class="imgContainer">
+        <h1>Join the ride.</h1>
+        <h2>Sign up today!</h2>
+        <p>Already have an account?<a href="www.google.com">Sign in</a></p>
+      </div>
+      <div class="formContainer">
         <form action="post">
-            <legend hidden>Personal Information</legend>
-            <fieldset style="border:none" class="personalInfo">
+          <legend hidden>Personal Information</legend>
+          <fieldset style="border: none" class="personalInfo">
+            <div class="names">
+              <div class="firstName">
                 <label for="firstName">*First Name:</label>
-                <input type="text" id="firstName" placeholder="My first name is..." required>
-
+                <input
+                  type="text"
+                  id="firstName"
+                  placeholder="My first name is..."
+                  required
+                />
+              </div>
+              <div class="lastName">
                 <label for="lastName">*Last Name:</label>
-                <input type="text" id="lastName" placeholder="My last name is..." required>
+                <input
+                  type="text"
+                  id="lastName"
+                  placeholder="My last name is..."
+                  required
+                />
+              </div>
+            </div>
 
-                <label for="email">*Email:</label>
-                <input type="email" id="email" placeholder="My email is..." required>
+            <label for="email">*Email:</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="My email is..."
+              required
+            />
 
-                <label for="phone">Phone number:</label>
-                <input type="tel" id="phone" placeholder="+359...">
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" placeholder="+359..." />
 
-                <label for="pass">*Password:</label>
-                <input type="password" id="pass" required>
+            <label for="pass">*Password:</label>
+            <input type="password" id="pass" required />
 
-                <label for="passRepeat">*Repeat password:</label>
-                <input type="password" name="" id="passRepeat" required>
-            </fieldset>
-            <button type="submit">Sing up</button>
+            <label for="passRepeat">*Repeat password:</label>
+            <input type="password" name="" id="passRepeat" required />
+          </fieldset>
+          <button type="submit">Sing up</button>
         </form>
-        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
