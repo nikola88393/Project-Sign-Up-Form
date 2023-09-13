@@ -103,7 +103,6 @@ input{
     display: flex;
     flex-direction: column;
     width: calc(17vw /2 - 10px);
-    /* width: 100%; */
 }
 .names {
     display: flex;
@@ -119,5 +118,41 @@ input:focus {
     outline: none;
     border-bottom: 2px solid  var(--button-color);
 }
+
+input + span {
+    position: relative;
+}
+input + span::before {
+    position: absolute;
+    bottom: 3.2vh;
+    right: 0.1vw;
+
+}
+input:invalid + span::before {
+    content: "✖";
+    color: var(--button-color);
+}
+input:valid + span::before {
+    content: "✓";
+    font-weight: 700;
+    color: var(--button-color);
+}
+input + span::after {
+    position: absolute;
+    left: 14.4vw;
+    bottom: 6.3vh;
+}
+/* Positioning for email validation box over the input element */
+/* input[type="email"]:invalid + span::after {
+    content: "yes";
+    border-radius: 4px;
+    border: 1px solid var(--button-color);
+    background-color: var(--button-color);
+    font-weight: 600;
+} 
+*/
+
+
+
 
 

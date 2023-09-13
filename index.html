@@ -21,39 +21,48 @@
               <div class="firstName">
                 <label for="firstName">*First Name:</label>
                 <input
+                class="input"
                   type="text"
                   id="firstName"
                   placeholder="My first name is..."
                   required
                 />
+                <span></span>
               </div>
               <div class="lastName">
                 <label for="lastName">*Last Name:</label>
                 <input
+                class="input"
+
                   type="text"
                   id="lastName"
                   placeholder="My last name is..."
                   required
                 />
+                <span></span>
               </div>
             </div>
-
             <label for="email">*Email:</label>
             <input
+            class="input"
               type="email"
               id="email"
-              placeholder="My email is..."
+              placeholder="example@mail.com"
               required
             />
+            <span></span>
 
             <label for="phone">Phone number:</label>
-            <input type="tel" id="phone" placeholder="+359..." />
+            <input class="input" type="tel" id="phone" placeholder="+359..." />
+            <span></span>
 
             <label for="pass">*Password:</label>
-            <input type="password" id="pass" required />
+            <input class="input" type="password" id="pass" required />
+            <span></span>
 
             <label for="passRepeat">*Repeat password:</label>
-            <input type="password" name="" id="passRepeat" required />
+            <input class="input" type="password" name="" id="passRepeat" required />
+            <span></span>
           </fieldset>
           <button type="submit">Sing up</button>
         </form>
