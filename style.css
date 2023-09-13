@@ -38,6 +38,7 @@ button {
     width: 17vw;
     height: 4vh;
     border-radius: 5px;
+    font-weight: 700;
     color: var(--font-color);
     background-color: var(--button-color);
 }
@@ -137,11 +138,25 @@ input:valid + span::before {
     font-weight: 700;
     color: var(--button-color);
 }
-input + span::after {
-    position: absolute;
-    left: 14.4vw;
-    bottom: 6.3vh;
+span + div {
+    position: relative;
 }
+#passMatch,
+#pass1{
+    position: absolute;
+    overflow: visible;
+    /* left: 61%; */
+    font-weight: 700;
+    color: var(--button-color);
+}
+/* span + div::before {
+    position: absolute;
+    content: "Password doesn't match";
+    top: -1.7vh;
+    white-space: nowrap;
+    font-weight: 700;
+    color: var(--button-color);
+} */
 /* Positioning for email validation box over the input element */
 /* input[type="email"]:invalid + span::after {
     content: "yes";

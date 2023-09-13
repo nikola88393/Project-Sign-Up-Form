@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Sign up page</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -22,10 +22,11 @@
               <div class="firstName">
                 <label for="firstName">*First Name:</label>
                 <input
-                class="input"
+                  class="input"
                   type="text"
                   id="firstName"
                   placeholder="My first name is..."
+                  pattern="^[^0-9]*$"
                   required
                 />
                 <span></span>
@@ -33,11 +34,11 @@
               <div class="lastName">
                 <label for="lastName">*Last Name:</label>
                 <input
-                class="input"
-
+                  class="input"
                   type="text"
                   id="lastName"
                   placeholder="My last name is..."
+                  pattern="^[^0-9]*$"
                   required
                 />
                 <span></span>
@@ -45,7 +46,7 @@
             </div>
             <label for="email">*Email:</label>
             <input
-            class="input"
+              class="input"
               type="email"
               id="email"
               placeholder="example@mail.com"
@@ -54,18 +55,41 @@
             <span></span>
 
             <label for="phone">Phone number:</label>
-            <input class="input" type="tel" id="phone" placeholder="+359..." />
+            <input
+              class="input"
+              type="tel"
+              id="phone"
+              placeholder="+359..."
+              pattern="^[0-9+]*$"
+            />
             <span></span>
 
-            <label for="pass">*Password:</label>
-            <input class="input" name="pass1" type="password" id="pass" required />
+            <label for="pass">*Password:<span id="pass1"></span></label>
+            <input
+              class="input length"
+              name="pass1"
+              type="password"
+              id="pass"
+              pattern=".{8,}"
+              required
+            />
             <span></span>
 
-            <label for="passRepeat">*Repeat password:</label>
-            <input class="input" name="pass2" type="password" name="" id="passRepeat" required />
+            <label for="passRepeat"
+              >*Repeat password:<span id="passMatch"></span
+            ></label>
+            <input
+              class="input"
+              name="pass2"
+              type="password"
+              name=""
+              id="passRepeat"
+              pattern=".{8,}"
+              required
+            />
             <span></span>
           </fieldset>
-          <button type="submit" onclick="verifyPass()">Sing up</button>
+          <button type="submit" onclick="verifyPass()">Sign up</button>
         </form>
       </div>
     </div>

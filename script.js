@@ -1,11 +1,28 @@
 function verifyPass(){
-    let pass1 = document.getElementById("pass1");
-    let pass2 = document.getElementById("pass2");
-    if(pass1 =! pass2){
-        console.log("password doesn't match");
+    let pass1 = document.getElementById("pass").value;
+    let pass2 = document.getElementById("passRepeat").value;
+    let match = document.querySelector("#passMatch");
+    if(pass2 !== pass1){
+        match.textContent = " Doesn't match";
     }
     else{
-        console.log("password matches");
+        match.textContent = "";
     }
+
+    let length = document.querySelector("#pass1");
+    if(pass1.value == ""){
+        length.textContent = "";
+    }
+    else if(pass1.length < 8){
+        length.textContent = " must be 8+ characters.";
+    }
+    else{
+        length.textContent = "";
+    }
+
 }
-verifyPass();
+
+document.getElementById("pass").addEventListener('input', verifyPass);
+document.getElementById("passRepeat").addEventListener('input', verifyPass);
+
+
