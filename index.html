@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Sign up page</title>
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="container">
@@ -57,14 +58,14 @@
             <span></span>
 
             <label for="pass">*Password:</label>
-            <input class="input" type="password" id="pass" required />
+            <input class="input" name="pass1" type="password" id="pass" required />
             <span></span>
 
             <label for="passRepeat">*Repeat password:</label>
-            <input class="input" type="password" name="" id="passRepeat" required />
+            <input class="input" name="pass2" type="password" name="" id="passRepeat" required />
             <span></span>
           </fieldset>
-          <button type="submit">Sing up</button>
+          <button type="submit" onclick="verifyPass()">Sing up</button>
         </form>
       </div>
     </div>
